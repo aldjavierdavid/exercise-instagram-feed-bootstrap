@@ -15,7 +15,7 @@
     integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
     crossorigin="anonymous"></script>
   <header class="navbar navbar-expand-lg bg-light">
-    <div class="d-flex">
+    <div class="d-flex me-10">
       <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
         <path
@@ -23,45 +23,87 @@
       </svg>
       <h1 class="fs-3">Instagram</h1>
     </div>
-    <div>
+    <div class="dropdown-center">
       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"> Create a new
         post</button>
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">⚙️</button>
-      <ul class="dropdown-menu">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton"
+        aria-expanded="false">⚙️</button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <li><a class="dropdown-item" href="#">Profile</a></li>
         <li><a class="dropdown-item" href="#">Accesibility</a></li>
         <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-        <li><a class="dropdown-item" href="#">Log out</a></li>
+        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
       </ul>
     </div>
 
-      <div class="modal" id="myModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
 
-            <div class="modal-header">
-              <h4 class="modal-title">Create a new post</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-                <div class="modal-body">
-                  <div class="form-group">
-                    <label class="mb-2" for="exampleFormControlInput1">Caption:</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa texto aquí...">
-                    <button class="btn btn-light mt-3 mb-2 me-2"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
-                    <button class="btn btn-light mt-3 mb-2"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></button>
-                  </div>
-                  
-                  <div class="modal-footer">
-
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
-                </div>
-            </div>
-
-
-
+          <div class="modal-header">
+            <h4 class="modal-title">Create a new post</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label class="mb-2" for="exampleFormControlInput1">Caption:</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingresa texto aquí...">
+              <button class="btn btn-light mt-3 mb-2 me-2"><svg width="20" height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
+                </svg>
+                <button class="btn btn-light mt-3 mb-2"><svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                  </svg></button>
+            </div>
+
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publish</button>
+            </div>
+          </div>
+        </div>
   </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 border border-1 mt-3">
+        <h4>Leo Messi, su familia y la copa del mundo</h4>
+        <img src="/img/WhatsApp Image 2023-03-30 at 1.21.32 PM.jpeg" class="img-fluid" alt="el mejor jugador de la historia del futbol sosteniendo cosas que gana el mejor jugador de la historia del futbol y su familia">
+        <p class="fw-bold">18.122.022 Likes</p>
+        <p>🙌🙌</p>
+      </div>
+      <div class="col-md-6 offset-md-3 border border-1 mt-3">
+        <h4>Paramore</h4>
+        <img src="/img/331169557_212868687931454_7270712511680541297_n.jpg" class="img-fluid" alt="la mejor banda (actual e hisoricamente)">
+        <p class="fw-bold">26 Likes</p>
+        <p>Karma's gonna come for all of us</p>
+      </div>
+      <div class="col-md-6 offset-md-3 border border-1 mt-3">
+        <h4>FC Barcelona gana el clasico</h4>
+        <img src="/img/WhatsApp Image 2023-03-30 at 1.46.35 PM.jpeg" class="img-fluid" alt="fc barcelona gana 2-1 sobre el real madrid">
+        <p class="fw-bold">12.121.212 Likes</p>
+        <p>Matando la liga</p>
+      </div>
+      <div class="col-md-6 offset-md-3 border border-1 mt-3">
+        <h4>Urb. Vista Hermosa</h4>
+        <img src="/img/WhatsApp Image 2023-03-30 at 1.46.55 PM.jpeg" class="img-fluid" alt="Urb. Vista Hermosa Edo. Aragua, La Victoria">
+        <p class="fw-bold">2.317 Likes</p>
+        <p>🏠🏠</p>
+      </div>
+      <div class="col-md-6 offset-md-3 border border-1 mt-3">
+        <h4>yyaaaa girll</h4>
+        <img src="/img/WhatsApp Image 2023-03-30 at 7.29.20 AM.jpeg" class="img-fluid" alt="yo con un sombrero q mas pues">
+        <p class="fw-bold">69 Likes</p>
+        <p>tu sabes cuantos años de flow tu tienes q acumular pa llegar aqui</p>
+      </div>
+
+
 
 
 </body>
